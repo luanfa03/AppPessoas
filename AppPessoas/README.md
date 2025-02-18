@@ -107,7 +107,7 @@ spring.datasource.username=sa
 
 spring.datasource.password=
 
-## 💻 Executar projeto
+## 💻 Link do repositório
 
 http://localhost:8080/swagger-ui.html
 
