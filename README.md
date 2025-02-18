@@ -1,4 +1,4 @@
-# Nome do projeto
+# API REST CONTATOS E PESSOAS
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
@@ -6,19 +6,9 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-<img src="imagem.png" alt="Exemplo imagem">
+<img src="[imagem.png](https://img.freepik.com/fotos-gratis/close-up-de-digitacao-mao-da-mulher-de-negocios-no-teclado-do-portatil-com-m_1232-2746.jpg?t=st=1739903935~exp=1739907535~hmac=348a325e30183a77412ddd2c08392feb5cf6093fbba29b12581567b7cf99ec58&w=740)" alt="Img Celular">
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
-
-### Ajustes e melhorias
-
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
-
-- [x] Tarefa 1
-- [x] Tarefa 2
-- [x] Tarefa 3
-- [ ] Tarefa 4
-- [ ] Tarefa 5
+> Este projeto é uma API REST em Java com Spring Boot, que permite gerenciar pessoas e seus contatos por meio de operações CRUD, a API permite cadastrar, consultar, atualizar e excluir registros de pessoas, além de gerenciar múltiplos contatos associados a cada uma delas.
 
 ## 💻 Pré-requisitos
 
