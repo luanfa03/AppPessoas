@@ -89,6 +89,27 @@ git clone https://github.com/luanfa03/AppPessoas.git
 
 ### H2
 
+application.properties:
+
+spring.h2.console.enabled=true
+
+spring.h2.console.path=/h2-console
+
+spring.jpa.database-plataform=org.hibernate.dialect.H2Dialect
+
+spring.jpa.show-sql=true
+
+spring.jpa.hibernate.ddl-auto=drop-and-create
+
+spring.datasource.url=jdbc:h2:mem:pessoas
+
+spring.datasource.username=sa
+
+spring.datasource.password=
+
+## 💻 Executar projeto
+
+http://localhost:8080/swagger-ui.html
 
 
 ## 🤝 Desenvolvido por:
@@ -104,11 +125,3 @@ git clone https://github.com/luanfa03/AppPessoas.git
       </a>
     </td>
 </table>
-
-## 😄 Seja um dos contribuidores
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
-
-## 📝 Licença
-
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
