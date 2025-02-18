@@ -6,33 +6,50 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-<img src="[imagem.png](https://img.freepik.com/fotos-gratis/close-up-de-digitacao-mao-da-mulher-de-negocios-no-teclado-do-portatil-com-m_1232-2746.jpg?t=st=1739903935~exp=1739907535~hmac=348a325e30183a77412ddd2c08392feb5cf6093fbba29b12581567b7cf99ec58&w=740)" alt="Img Celular">
+### Este projeto é uma API REST em Java com Spring Boot, que permite gerenciar pessoas e seus contatos por meio de operações CRUD, a API permite cadastrar, consultar, atualizar e excluir registros de pessoas, além de gerenciar múltiplos contatos associados a cada uma delas.
 
-> Este projeto é uma API REST em Java com Spring Boot, que permite gerenciar pessoas e seus contatos por meio de operações CRUD, a API permite cadastrar, consultar, atualizar e excluir registros de pessoas, além de gerenciar múltiplos contatos associados a cada uma delas.
+## 💻 Tecnologias Utilizadas
 
-## 💻 Pré-requisitos
+Java 21
 
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
+Spring Boot 3.4.2
 
-- Você instalou a versão mais recente de `<linguagem / dependência / requeridos>`
-- Você tem uma máquina `<Windows / Linux / Mac>`. Indique qual sistema operacional é compatível / não compatível.
-- Você leu `<guia / link / documentação_relacionada_ao_projeto>`.
+JPA/Hibernate
 
-## 🚀 Instalando <nome_do_projeto>
+Banco de Dados: H2
 
-Para instalar o <nome_do_projeto>, siga estas etapas:
+Swagger: OpenAPI
 
-Linux e macOS:
+Postman
 
-```
-<comando_de_instalação>
-```
+## 🚀 Funcionalidades
 
-Windows:
+### CRUD de Pessoas:
+   
+a. Criar Pessoa
 
-```
-<comando_de_instalação>
-```
+b. Obter Pessoa por ID
+
+c. Obter Pessoa por ID para mala direta
+
+d. Listar todas as Pessoas
+
+e. Atualizar Pessoa por ID
+
+f. Deletar Pessoa por ID
+
+
+### CRUD de Contatos:
+
+a. Adicionar um novo Contato a uma Pessoa
+
+b. Obter Contato por ID
+
+c. Listar todos os Contatos de uma Pessoa
+
+d. Atualizar Contato por ID
+
+e. Deletar Contato por ID
 
 ## ☕ Usando <nome_do_projeto>
 
