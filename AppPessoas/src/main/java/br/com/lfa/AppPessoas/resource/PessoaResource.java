@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -85,14 +86,20 @@ public class PessoaResource {
 	}
 	
 	@Operation(summary = "Atualizar Pessoa", description = "Atualiza informações de uma pessoa já cadastrada.")
-	@PutMapping //PUT http://localhost:8080/api/pessoas
-	public ResponseEntity<Pessoas> update(@RequestBody Pessoas pessoa){
-		Pessoas updPessoa = pessoaService.update(pessoa);
-		if(updPessoa == null) {
-			return ResponseEntity.notFound().build(); //status code 404
-		}else {
-			return ResponseEntity.ok(updPessoa); // status code 200
-		}
+	@CrossOrigin(origins = "http://localhost:4200") // Isso permite requisições de qualquer método HTTP
+	@PutMapping("/{id}") //PUT http://localhost:8080/api/pessoas/1
+	public ResponseEntity<Pessoas> update(@PathVariable Long id, @RequestBody Pessoas pessoa) {
+	    Optional<Pessoas> findPessoa = pessoaService.findById(id);
+	    if (findPessoa.isPresent()) {
+	        Pessoas updPessoa = findPessoa.get();
+	        updPessoa.setNome(pessoa.getNome());
+	        updPessoa.setCep(pessoa.getCep());
+	        updPessoa.setCidade(pessoa.getCidade());
+	        updPessoa.setEndereco(pessoa.getEndereco());
+	        updPessoa.setUf(pessoa.getUf());
+	        return ResponseEntity.ok(pessoaService.save(updPessoa));
+	    }
+	    return ResponseEntity.notFound().build();
 	}
 	
 	@Operation(summary = "Deletar Pessoa", description = "Exclui informações de uma pessoa já cadastrada")
@@ -101,4 +108,4 @@ public class PessoaResource {
 		pessoaService.delete(id);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT); //status code 204
 	}
-}
+} 
