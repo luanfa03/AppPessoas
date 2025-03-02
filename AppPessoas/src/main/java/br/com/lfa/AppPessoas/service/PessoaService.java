@@ -56,9 +56,9 @@ public class PessoaService {
 	}
 	
 	//CRUD - Update
-	public Pessoas update(Pessoas pessoa) {
-		Optional<Pessoas> findPessoa = pessoaRepository.findById(pessoa.getId());
-		if(findPessoa.isPresent()) {
+	public Pessoas update(Long id, Pessoas pessoa) {
+		Optional<Pessoas> findPessoa = pessoaRepository.findById(id);
+		if (findPessoa.isPresent()) {
 			Pessoas updPessoa = findPessoa.get();
 			updPessoa.setNome(pessoa.getNome());
 			updPessoa.setCep(pessoa.getCep());
@@ -67,7 +67,7 @@ public class PessoaService {
 			updPessoa.setUf(pessoa.getUf());
 			return pessoaRepository.save(updPessoa);
 		}
-		return pessoaRepository.save(pessoa);
+		return null; // Retorna null se a pessoa não existir no banco
 	}
 	
 	//CRUD - Delete
